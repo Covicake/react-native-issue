@@ -1,20 +1,23 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <TouchableOpacity disabled accessibilityLabel="test" style={styles.container}>
+      <Text style={{color: 'white'}}>Open up App.tsx to start working on your app!</Text>
+    </TouchableOpacity>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
+    width: 150,
+    height: 40,
+    margin: 'auto',
+    padding: 16,
+    borderRadius: 8,
+    backgroundColor: 'blue',
     alignItems: 'center',
     justifyContent: 'center',
   },
